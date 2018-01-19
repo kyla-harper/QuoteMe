@@ -17,7 +17,7 @@ module QuoteMe
         event << '  •`addquote <name> <body>` - adds a new quote'
         event << '  •`delquote <id>` - deletes the quote with the given id'
         event << 'Check out the full list of commands at:'
-        event << CONFIG.commands_url 
+        event << "<#{CONFIG.commands_url}>"
       end
     end
   end
