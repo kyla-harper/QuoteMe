@@ -10,7 +10,7 @@ module QuoteMe
       # COMING SOON TO A BOT NEAR YOU
 
       # Retrieve quote by name command
-      command(%i[q quote quotebyname],
+      command(%i[q quote quotebyname =],
               description: 'Retrives a random quote with the given name.',
               usage: "#{QUOTE_ME.prefix}quote <name>") do |event, quote|
         quote = Database::Quote.where(name: quote, server_id: event.server.id).all.sample
@@ -34,7 +34,7 @@ module QuoteMe
       end
 
       # Add quote command
-      command(%i[addq addquote],
+      command(%i[addq addquote +],
               description: 'Adds a new quote with the given name.',
               usage: "#{QUOTE_ME.prefix}addquote <name> <body>") do |event, name, *body|
         quote = Database::Quote.new(name: name,

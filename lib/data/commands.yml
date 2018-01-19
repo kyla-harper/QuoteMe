@@ -1,5 +1,5 @@
 quote:
-  aliases: [q , quotebyname]
+  aliases: [q , quotebyname, "="]
   description: Retrives a random quote with the given name.
   usage: quote <name>
 quoteid:
@@ -11,7 +11,7 @@ quoteauthor:
   description: Retrieves a random quote by the given user.
   usage: quoteauthor <author>
 addquote:
-  aliases: [addq]
+  aliases: [addq, "+"]
   description: Adds a new quote with the given name.
   usage: addquote <name> <body>
 delquote:
