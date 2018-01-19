@@ -1,0 +1,24 @@
+quote:
+  aliases: [q , quotebyname]
+  description: Retrives a random quote with the given name.
+  usage: quote <name>
+quoteid:
+  aliases: [qi, quotebyid]
+  description: Retrives the quote with the given ID.
+  usage: quoteid <id>
+quoteauthor:
+  aliases: [qa, quotebyauthor]
+  description: Retrieves a random quote by the given user.
+  usage: quoteauthor <author>
+addquote:
+  aliases: [addq]
+  description: Adds a new quote with the given name.
+  usage: addquote <name> <body>
+delquote:
+  aliases: [delq, deletequote]
+  description: Deletes the quote with the given name.
+  usage: deletequote <quoteid>
+help:
+  aliases: [h]
+  description: Sends instructions on how to use the bot
+  usage: help

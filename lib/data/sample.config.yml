@@ -1,0 +1,48 @@
+# Your bot's client id
+client_id:
+
+# Your bot's token goes here
+token:
+
+# The command prefix you would like to use for your bot
+#
+# Deafult: $
+prefix: $
+
+# The game that is says your bot is playing in the status message
+# i.e. Playing Overwatch
+#
+# Default: Quoting Thoughts
+game: Quoting Thoughts
+
+# Whether or not to enable fancy log messages
+#
+# Default: true
+fancy_log: true
+
+# The permissions to give your bot when people invite it to a server
+# Permissions can be calculated from here:
+# https://discordapi.com/permissions.html
+#
+# Default: 52224
+permissions: 52224
+
+# The color to use on embeds for error messages
+# The color should be a stand RGB hex color procedded by a `0x` rather than a `#`
+#
+# Default: 0xbb2735
+error_embed_color: 0xbb2735
+
+# The color to use on embeds for success messages
+# The color should be a stand RGB hex color procedded by a `0x` rather than a `#`
+#
+# Default: 0x0dbfe0
+success_embed_color: 0x0dbfe0
+
+# The url sent in the bot's help message where the user 
+# can see a full list of the bots commands.
+#
+# IT IS NOT RECOMMENDED THAT YOU CHANGE THIS VALUE
+# 
+# Default: https://github.com/flutterflies/QuoteMe/wiki/commands
+commands_url: https://github.com/flutterflies/QuoteMe/wiki/Commands
