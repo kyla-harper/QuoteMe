@@ -20,15 +20,14 @@ task :cmd_markdown do
   markdown_string << "|command|aliases|description|usage|\n"
   markdown_string << "|---|---|---|---|\n"
   commands.each_pair.each do |command|
-      markdown_string << "|`#{command.first}`|"
-      markdown_string << if command.last['aliases'].empty?
-                           'none'
-                         else
-                           "`#{command.last['aliases'].join('`, `')}`"
-                         end
-      markdown_string << "|#{command.last['description']}"
-      markdown_string << "|`#{command.last['usage']}`|\n"
-    
+    markdown_string << "|`#{command.first}`|"
+    markdown_string << if command.last['aliases'].empty?
+                         'none'
+                       else
+                         "`#{command.last['aliases'].join('`, `')}`"
+                       end
+    markdown_string << "|#{command.last['description']}"
+    markdown_string << "|`#{command.last['usage']}`|\n"
   end
   File.open('commands.md', 'w') { |file| file.write markdown_string }
 end
