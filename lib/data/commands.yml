@@ -22,3 +22,7 @@ help:
   aliases: [h]
   description: Sends instructions on how to use the bot
   usage: help
+toggleimportnadeko:
+  aliases: []
+  description: Toggles weather or not Quote Me should listen to quotes from Nadeko and try to import them
+  usage: toggleimportnadeko
