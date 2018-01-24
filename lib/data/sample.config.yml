@@ -12,8 +12,9 @@ prefix: $
 # The game that is says your bot is playing in the status message
 # i.e. Playing Overwatch
 #
-# Default: Quoting Thoughts
-game: Quoting Thoughts
+# Default: Say {}help
+#   Here {} is used as a place holder and will be replaced with the command prefix
+game: Say {}help
 
 # Whether or not to enable fancy log messages
 #
@@ -39,10 +40,10 @@ error_embed_color: 0xbb2735
 # Default: 0x0dbfe0
 success_embed_color: 0x0dbfe0
 
-# The url sent in the bot's help message where the user 
+# The url sent in the bot's help message where the user
 # can see a full list of the bots commands.
 #
 # IT IS NOT RECOMMENDED THAT YOU CHANGE THIS VALUE
-# 
+#
 # Default: https://github.com/flutterflies/QuoteMe/wiki/commands
 commands_url: https://github.com/flutterflies/QuoteMe/wiki/Commands

@@ -6,7 +6,12 @@ module QuoteMe
     module Ready
       extend Discordrb::EventContainer
       ready do |event|
-        event.bot.game = CONFIG.game
+        game = CONFIG.game
+        event.bot.game = if game.include? '{}'
+                           game.sub '{}', QUOTE_ME.prefix
+                         else
+                           game
+                         end
 
         # Use the ready event to make sure every server we are on has a record
         # in the server_config table
