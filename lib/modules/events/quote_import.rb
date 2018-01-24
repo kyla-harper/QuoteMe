@@ -26,7 +26,7 @@ module QuoteMe
                                       body: body)
           event.channel.send_embed do |embed|
             if quote.save
-              embed.description = 'Quote successfully imported.'
+              embed.description = "Quote successfully imported; `##{quote.id}`"
               embed.color = CONFIG.success_embed_color
             else
               embed.description = 'Unable to import quote.'
