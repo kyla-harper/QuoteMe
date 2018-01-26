@@ -77,7 +77,21 @@ module QuoteMe
       end
 
       # Delete all quotes command
-      # COMING SOON TO A BOT NEAR YOU
+      command(%i[deleteallquotes],
+              description: 'Deletes all quotes associated with your server',
+              usage: "#{QUOTE_ME.prefix}deleteallquotes") do |event, comfirmation|
+        if !event.user.owner? # Must be server owner
+          event << 'You must be the server owner in oder to run this command.'
+        elsif comfirmation != '--no-preserve-root' # Need confirmation flag
+          event << 'This is a very dangerous command that cannot be undone.'
+          event << 'If you are absolutly sure that you want to delete every ' \
+                   'quote on your server, run the command with the confirmation flag'
+          event << "```#{QUOTE_ME.prefix}deleteallquotes --no-preserve-root```"
+        else
+          Database::Quote.where(server_id: event.server.id).delete
+          event << 'All quotes belonging to you server have been deleted.'
+        end
+      end
     end
   end
 end

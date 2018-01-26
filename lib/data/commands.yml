@@ -18,6 +18,10 @@ delquote:
   aliases: [delq, deletequote]
   description: Deletes the quote with the given name.
   usage: deletequote <quoteid>
+deleteallquotes:
+  aliases: []
+  description: Deletes all commands belonging to your seerver
+  usage: deleteallquotes
 help:
   aliases: [h]
   description: Sends instructions on how to use the bot
