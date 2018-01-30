@@ -43,7 +43,7 @@ module QuoteMe
                                     body: body.join(' '))
         event.channel.send_embed do |embed|
           if quote.save
-            embed.description = "#{event.author.mention} Quote successfully added."
+            embed.description = "#{event.author.mention} Quote successfully added with id `#{quote.id}`."
             embed.color = CONFIG.success_embed_color
           else
             embed.description = "#{event.author.mention} Unable to add quote."
