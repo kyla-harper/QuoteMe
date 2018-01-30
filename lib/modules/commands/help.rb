@@ -23,7 +23,7 @@ module QuoteMe
         event << '  •`addquote <name> <body>` - adds a new quote'
         event << '    ◦ Aliased as: `addq`, `+`'
         event << '  •`delquote <id>` - deletes the quote with the given id'
-        event << '    ◦ Aliased as: `delq`, `deletequote`'
+        event << '    ◦ Aliased as: `delq`, `deletequote`, `-`'
         event << '```'
         event << 'Check out the full list of commands at:'
         event << "<#{CONFIG.commands_url}>"

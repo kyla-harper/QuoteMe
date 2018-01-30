@@ -53,7 +53,7 @@ module QuoteMe
       end
 
       # Delete quote command
-      command(%i[delq delquote deletequote],
+      command(%i[delq delquote deletequote -],
               description: 'Deletes the quote with the given name.',
               usage: "#{QUOTE_ME.prefix}deletequote <quoteid>") do |event, quoteid|
         quote = Database::Quote.where(id: quoteid).first

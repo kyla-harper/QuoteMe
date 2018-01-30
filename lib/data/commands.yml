@@ -15,7 +15,7 @@ addquote:
   description: Adds a new quote with the given name.
   usage: addquote <name> <body>
 delquote:
-  aliases: [delq, deletequote]
+  aliases: [delq, deletequote, "-"]
   description: Deletes the quote with the given name.
   usage: deletequote <quoteid>
 deleteallquotes:
