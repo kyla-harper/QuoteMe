@@ -1,4 +1,8 @@
 # Quote Me
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![Add to server](https://img.shields.io/badge/Add%20to%20your-server-7289DA.svg?style=flat-square)](https://discordapp.com/oauth2/authorize?&client_id=403268142312456204&scope=bot&permissions=52224)
+<!---[![Add to server](https://img.shields.io/badge/discord-join-7289DA.svg?style=flat-square)]()--->
+
 
 ### Table of Contents
 1. [Overview](#overview)
