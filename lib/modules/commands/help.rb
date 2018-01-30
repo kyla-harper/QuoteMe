@@ -28,6 +28,20 @@ module QuoteMe
         event << 'Check out the full list of commands at:'
         event << "<#{CONFIG.commands_url}>"
       end
+
+      # Ping command
+      command(:ping,
+              description: 'Pings the bot to make sure it is alive',
+              usage: "#{QUOTE_ME.prefix}ping") do |event|
+        event.channel.send_embed do |embed|
+          embed.title = 'Pong!'
+          embed.color = CONFIG.success_embed_color
+          delay = "#{((Time.now - event.timestamp) * 1000).to_i}ms"
+          embed.description =
+            "#{event.author.mention} "\
+            ":ping_pong: #{delay}"
+        end
+      end
     end
   end
 end

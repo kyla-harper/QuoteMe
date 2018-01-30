@@ -26,6 +26,10 @@ help:
   aliases: [h]
   description: Sends instructions on how to use the bot
   usage: help
+ping:
+  aliases: []
+  description: Pings the bot to make sure it is alive
+  usage: ping
 toggleimportnadeko:
   aliases: []
   description: Toggles weather or not Quote Me should listen to quotes from Nadeko and try to import them
