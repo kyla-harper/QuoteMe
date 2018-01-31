@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/meew0/discordrb.git
-  revision: 4d83987438c5e40debff5686369fc6c2ac37d829
-  ref: 4d83987
+  revision: 443afbfbb2f573e106bdb6af0557b6072783ee78
+  ref: 443afbf
   specs:
     discordrb (3.2.1)
       discordrb-webhooks (~> 3.2.0.1)
@@ -15,7 +15,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    ast (2.3.0)
+    ast (2.4.0)
     domain_name (0.5.20170404)
       unf (>= 0.0.5, < 1.0.0)
     event_emitter (0.2.6)
@@ -66,6 +66,9 @@ DEPENDENCIES
   rubocop
   sequel
   sqlite3
+
+RUBY VERSION
+   ruby 2.5.0p0
 
 BUNDLED WITH
    1.16.1
