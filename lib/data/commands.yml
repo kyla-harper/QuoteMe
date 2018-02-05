@@ -3,11 +3,11 @@ quote:
   description: Retrives a random quote with the given name.
   usage: quote <name>
 quoteid:
-  aliases: [qi, quotebyid]
+  aliases: [qi, quotebyid, "#"]
   description: Retrives the quote with the given ID.
   usage: quoteid <id>
 quoteauthor:
-  aliases: [qa, quotebyauthor]
+  aliases: [qa, quotebyauthor, "@"]
   description: Retrieves a random quote by the given user.
   usage: quoteauthor <author>
 addquote:

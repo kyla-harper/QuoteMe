@@ -18,7 +18,7 @@ module QuoteMe
       end
 
       # Retrieve quote by id command
-      command(%i[qi quoteid quotebyid],
+      command(%i[qi quoteid quotebyid #],
               description: 'Retrives the quote with the given ID.',
               usage: "#{QUOTE_ME.prefix}quoteid <id>") do |event, id|
         quote = Database::Quote.where(id: id, server_id: event.server.id).first
@@ -26,7 +26,7 @@ module QuoteMe
       end
 
       # Retrieve quote by author command
-      command(%i[qa quoteauthor quotebyauthor],
+      command(%i[qa quoteauthor quotebyauthor @],
               description: 'Retrieves a random quote by the given user.',
               usage: "#{QUOTE_ME.prefix}quoteauthor <author>") do |event, author|
         quote = Database::Quote.where(added_by: author, server_id: event.server.id).all.sample
