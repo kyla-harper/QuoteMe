@@ -20,6 +20,8 @@ module QuoteMe
         event << '    ◦ Aliased as: `qi`, `quotebyid`, `#`'
         event << '  •`quoteauthor <author>` - gets a quote by author'
         event << '    ◦ Aliased as: `qa`, `quotebyauthor`, `@`'
+        event << '  •`quotesbykeyword <keyword>` - gets all quotes with a given keyword'
+        event << '    ◦ Aliased as: `qk`, `quoteskey`'
         event << '  •`addquote <name> <body>` - adds a new quote'
         event << '    ◦ Aliased as: `addq`, `+`'
         event << '  •`delquote <id>` - deletes the quote with the given id'

@@ -34,3 +34,7 @@ toggleimportnadeko:
   aliases: []
   description: Toggles weather or not Quote Me should listen to quotes from Nadeko and try to import them
   usage: toggleimportnadeko
+quotesbykeyword:
+  aliases: [qk quoteskey]
+  description: Lists all quotes with a given keyword
+  usage: allkey <keyword>

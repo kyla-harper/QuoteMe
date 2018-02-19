@@ -92,6 +92,23 @@ module QuoteMe
           event << 'All quotes belonging to you server have been deleted.'
         end
       end
+
+      # Retrieve all quotes by keyword
+      command(%i[qk quoteskey quotesbykeyword],
+              description: 'Shows all quotes that match a given keyword',
+              usage: "#{QUOTE_ME.prefix}quotesbykeyword <name>") do |event, quote|
+
+        quotes = Database::Quote.where(name: quote, server_id: event.server.id).all
+        message = ""
+        quotes.each do |quote|
+          body = quote.body
+          body = "<#{body}>" if body.start_with?('http')
+
+          message += "`##{quote.id}` by #{quote.added_by}: #{body}\n"
+        end
+
+        message
+      end
     end
   end
 end
