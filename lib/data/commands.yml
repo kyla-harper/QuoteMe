@@ -10,6 +10,10 @@ quoteauthor:
   aliases: [qa, quotebyauthor, "@"]
   description: Retrieves a random quote by the given user.
   usage: quoteauthor <author>
+allquotesbyname:
+  aliases: [an allbyname allquotesbyname],
+  description: Lists all quotes with a given name
+  usage: allquotesbyname <name>
 addquote:
   aliases: [addq, "+"]
   description: Adds a new quote with the given name.
@@ -34,7 +38,3 @@ toggleimportnadeko:
   aliases: []
   description: Toggles weather or not Quote Me should listen to quotes from Nadeko and try to import them
   usage: toggleimportnadeko
-quotesbykeyword:
-  aliases: [qk quoteskey]
-  description: Lists all quotes with a given keyword
-  usage: allkey <keyword>

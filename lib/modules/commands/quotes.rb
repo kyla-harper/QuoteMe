@@ -33,6 +33,23 @@ module QuoteMe
         "`##{quote.id}` - #{quote.name}\n#{quote.body}"
       end
 
+      # Retrieve all quotes by name
+      command(%i[an allbyname allquotesbyname],
+              description: 'Shows all quotes that match a given name',
+              usage: "#{QUOTE_ME.prefix}allquotesbyname <name>") do |event, quote|
+
+        quotes = Database::Quote.where(name: quote, server_id: event.server.id).all
+
+        event << "Showing all quotes for __#{quote}__:"
+        quotes.each do |q|
+          body = q.body
+          body = "<#{body}>" if body.start_with?('http')
+          event << "`##{q.id}` by **#{q.added_by}**: #{body}"
+        end
+
+        nil
+      end
+
       # Add quote command
       command(%i[addq addquote +],
               description: 'Adds a new quote with the given name.',
@@ -91,23 +108,6 @@ module QuoteMe
           Database::Quote.where(server_id: event.server.id).delete
           event << 'All quotes belonging to you server have been deleted.'
         end
-      end
-
-      # Retrieve all quotes by keyword
-      command(%i[qk quoteskey quotesbykeyword],
-              description: 'Shows all quotes that match a given keyword',
-              usage: "#{QUOTE_ME.prefix}quotesbykeyword <name>") do |event, quote|
-
-        quotes = Database::Quote.where(name: quote, server_id: event.server.id).all
-        message = ""
-        quotes.each do |quote|
-          body = quote.body
-          body = "<#{body}>" if body.start_with?('http')
-
-          message += "`##{quote.id}` by #{quote.added_by}: #{body}\n"
-        end
-
-        message
       end
     end
   end
